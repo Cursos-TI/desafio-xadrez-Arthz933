@@ -3,6 +3,8 @@
 int funcaoxadrez() {
     char opcao; 
 
+    printf("novo commit");
+
 
     printf("BEM VINDO AO PROGRAMA DE MOVIMENTAÇÃO DE PEÇAS DE XADREZ !\n");
     printf("T- torre\n");
