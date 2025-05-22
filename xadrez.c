@@ -10,6 +10,7 @@ int funcaoxadrez() {
     printf("T- torre\n");
     printf("B- bispo\n");
     printf("R- rainha\n");
+    printf("C- cavalo\n");
     printf("S - sair\n");
     printf("escolha uma peça para ser movimementada: ");    
     scanf(" %c", &opcao); // esse espaço no leitor % ignora espaços em branco no scanf
@@ -45,6 +46,18 @@ int funcaoxadrez() {
 
         }
 
+        break;
+
+        case 'c':
+        case 'C':
+        printf("você selecionou o cavalo: \n");
+        int movimentodocavalo = 1;
+        while(movimentodocavalo--) {
+            for(int n = 0; n < 2; n++) {
+                printf("baixo\n");
+            }
+            printf("direita\n");
+        }
         break;
 
         case 's':
