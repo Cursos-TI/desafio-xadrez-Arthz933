@@ -1,77 +1,87 @@
 #include <stdio.h>
 
+// Definição da função fora de qualquer outra
+void funcaotorre() {
+    for(int t = 1; t <= 5; t++){
+    printf("direita\n");
+}
+}
+
+void funcaobispo() {
+    int b = 1;
+    while(b <= 5) {
+        printf("cima, direita\n");
+        b++;
+    }
+} 
+
+void funcaorainha() {
+    int r = 0;
+    do {
+        printf("esquerda\n");
+        r++;
+
+    } while(r <= 8);
+}
+
+void funcaocavalo() {
+    
+}
 int funcaoxadrez() {
-    char opcao; 
+    char opcao;
 
-    printf("novo commit");
-
-
-    printf("BEM VINDO AO PROGRAMA DE MOVIMENTAÇÃO DE PEÇAS DE XADREZ !\n");
-    printf("T- torre\n");
-    printf("B- bispo\n");
-    printf("R- rainha\n");
-    printf("C- cavalo\n");
+    printf("BEM VINDO AO PROGRAMA DE MOVIMENTAÇÃO DE PEÇAS DE XADREZ!\n");
+    printf("T - torre\n");
+    printf("B - bispo\n");
+    printf("R - rainha\n");
+    printf("C - cavalo\n");
     printf("S - sair\n");
-    printf("escolha uma peça para ser movimementada: ");    
-    scanf(" %c", &opcao); // esse espaço no leitor % ignora espaços em branco no scanf
+    printf("Escolha uma peça para ser movimentada: ");
+    scanf(" %c", &opcao); // o espaço ignora espaços em branco
 
     switch (opcao) {
-        case 't': 
-        case 'T':
-        int t = 1;
-        printf("você selecionou a torre: \n");
+        case 't':
+        case 'T': {
+            printf("Você selecionou a torre:\n");
+            funcaotorre(); // chamada da função torre
+            break;
+        }
 
-        do {
-            printf("direita\n", t++);
-
-        } while (t <= 5); // faz "direita" enquanto int t for menor ou igual a 5, adicionando 1 a variável, ou seja 5 vezes
-        break;
         case 'b':
-        case 'B':
-
-        int b = 1;
-        printf("você selecionou o bispo: \n");
-
-        while (b <= 5) {
-        printf("cima, direita\n", b++); // mostra "cima, direita" enquanto b que é 1 for <= a 5, adicionando 1 a variável, ou seja 5 vezes
+        case 'B': {
+            printf("Você selecionou o bispo:\n");
+            funcaobispo(); // chamada da função bispo
+            break;
         }
 
-        break;
         case 'r':
-        case 'R':
-        printf("você selecionou a rainha: \n");
-
-        for (int r = 0; r < 8; r++) {
-        printf("esquerda\n"); // mostra "esquerda" enquanto r = 0 for menor que 8, e adicionando 1 a variável, ou seja, 8 vezes
-
+        case 'R': {
+            printf("Você selecionou a rainha:\n");
+            funcaorainha(); // chamada da função rainha
+            break;
         }
-
-        break;
 
         case 'c':
-        case 'C':
-        printf("você selecionou o cavalo: \n");
-        int movimentodocavalo = 1;
-        while(movimentodocavalo--) {
-            for(int n = 0; n < 2; n++) {
-                printf("baixo\n");
-            }
-            printf("direita\n");
+        case 'C': {
+            printf("Você selecionou o cavalo:\n");
+            
+            break;
         }
-        break;
 
         case 's':
-        case 'S':
-        printf("saindo...");
-        break;
-        default: // faz com que qualquer coisa digitada diferente de "s, S, r, R, t, T, b ou B", seja mostrado na tela um aviso de opção inválida 
-        printf("opção inválida, tente novamente !");
+        case 'S': {
+            printf("Saindo...\n");
+            break;
+        }
+
+        default:
+            printf("Opção inválida, tente novamente!\n");
     }
 
     return 0;
-} 
+}
 
-int main() { // função principal que chama a funcaoxadrez para ser executada
+int main() {
     funcaoxadrez();
     return 0;
 }
