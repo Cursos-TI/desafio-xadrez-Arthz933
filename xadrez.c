@@ -4,14 +4,26 @@
 void funcaotorre() {
     for(int t = 1; t <= 5; t++){
     printf("direita\n");
+
+    return; // return sem valor pois funções tipo void não retornam valores (opcional em c)
+    
+    // return 0 é usado em funções int que retornam valores, significa que o código foi bem sucedido
+
 }
 }
 
 void funcaobispo() {
-    int b = 1;
-    while(b <= 5) {
-        printf("cima, direita\n");
-        b++;
+    int d, e;
+
+    for(d = 1; d <= 5; d++) { // a condição determina quantos blocos de "cima direita" serão mostrados
+        printf("cima\n");
+        for(e = 0; e < 1; e++) { /*faz com que seja adicionado apenas um "esquerda", 0 + 1 = 1 e a variável
+            precisa ser < 1, fim do código*/ 
+            printf("direita\n");
+        }
+
+        return;
+
     }
 } 
 
@@ -22,11 +34,24 @@ void funcaorainha() {
         r++;
 
     } while(r <= 8);
+
+    return;
 }
 
 void funcaocavalo() {
+    int c, d;
+    for(c = 2; c <= 2; c++) {
+        printf("cima\n");
+        printf("cima\n");
+        for(d = 1; d <= 1; d++) {
+        printf("direita\n");
+        }
+    }
+    return;
+    }
     
-}
+
+
 int funcaoxadrez() {
     char opcao;
 
@@ -64,6 +89,7 @@ int funcaoxadrez() {
         case 'c':
         case 'C': {
             printf("Você selecionou o cavalo:\n");
+            funcaocavalo();
             
             break;
         }
