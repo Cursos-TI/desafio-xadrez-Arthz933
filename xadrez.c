@@ -31,20 +31,20 @@ void funcaorainha() {
     int r = 0;
     do {
         printf("esquerda\n");
-        r++;
+        r++; // adiciona +1 ao r
 
-    } while(r <= 8);
+    } while(r <= 8); // faz a função do rodar 8 vezes 
 
     return;
 }
 
 void funcaocavalo() {
     int c, d;
-    for(c = 2; c <= 2; c++) {
-        printf("cima\n");
+    for(c = 2; c <= 2; c++) { // faz com que apenas um bloco seja mostrado 
+        printf("cima\n"); // mostra cima cima 
         printf("cima\n");
         for(d = 1; d <= 1; d++) {
-        printf("direita\n");
+        printf("direita\n"); // mostra direita
         }
     }
     return;
@@ -89,19 +89,20 @@ int funcaoxadrez() {
         case 'c':
         case 'C': {
             printf("Você selecionou o cavalo:\n");
-            funcaocavalo();
+            funcaocavalo(); // chamada da função cavalo
             
             break;
         }
 
         case 's':
         case 'S': {
-            printf("Saindo...\n");
+            printf("Saindo...\n"); // faz um saindo...
             break;
         }
 
         default:
-            printf("Opção inválida, tente novamente!\n");
+            printf("Opção inválida, tente novamente!\n"); /*mostra printf para qualquer opção que não esteja
+            dentro de um case*/ 
     }
 
     return 0;
